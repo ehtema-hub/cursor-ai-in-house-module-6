@@ -315,7 +315,7 @@ jobs:
         run: npm ci
         working-directory: qa-automation/tests/e2e
       - name: Cache Playwright browsers
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('qa-automation/tests/e2e/package-lock.json') }}
